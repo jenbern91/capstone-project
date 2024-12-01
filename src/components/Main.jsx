@@ -12,6 +12,7 @@ const Main = () => {
         <div className='grid'>
           <div className='weekly-specials'>
             <h2>This Week's Specials</h2>
+            <button className='Online Menu'>Online Menu</button>
                 <section className='menu-1'>
                   <img src={image1}></img>
                   <p className='dish-name'>Greek Salad</p>

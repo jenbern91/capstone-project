@@ -34,3 +34,14 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+button {
+    background-color: var(--primary-yellow);
+    font-family: 'Karla', 'Times New Roman', Times, serif;
+    height: 50px;
+    width: 200px;
+    border-radius: 16px;
+    border-style: none;
+    font-size: 15pt;
+    font-weight: bold;
+  }
