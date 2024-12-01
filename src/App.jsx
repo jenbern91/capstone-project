@@ -1,18 +1,20 @@
 import './App.css';
+import './components/layout/Header.css';
+import './components/layout/Navbar.css';
+import './components/layout/Main.css';
+
 import React from 'react';
-import Header from './components/Header';
 import Nav from './components/Nav';
+import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
-
-
 
 
 function App() {
   return (
     <>
-    <Header />
     <Nav />
+    <Header />
     <Main />
     <Footer />
     </>

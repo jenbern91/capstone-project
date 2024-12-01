@@ -1,0 +1,86 @@
+/*Styling Code*/
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    overflow: visible;
+    display: grid;
+  }
+  
+  .navbar {
+    background-color:#EDEFEE;
+    height: 90px;
+    padding: 0 30px;
+    font-size: large;
+  }
+  
+  /* No styling on list items */
+  li {
+    list-style-type: none;
+  }
+  
+  .navbar img {
+    margin: 10px 0;
+    height: 70px;
+  }
+  
+  .navbar .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .navbar ul {
+    display: flex;
+    font-size: 16pt;
+    font-weight: bold;
+  }
+  
+  /* Changes the color of both links to white, adds padding between them and margin as well */
+  
+  .navbar a {
+    color: #495E57;
+    padding: 9px;
+    margin: 0 10px;
+  }
+  
+  
+  .navbar ul li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1.5px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  .navbar ul li:hover:after {
+    width: 80%;
+    background: #495E57;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+  
