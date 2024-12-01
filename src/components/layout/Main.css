@@ -8,14 +8,25 @@
     --border-radius: 16px;
   }
   
-  h2{
+h2 {
     font-family: 'Markazi Text', 'Times New Roman', Times, serif;
     color: var(--highlight-black);
     font-size: 30pt;
     
 }
 
-.dish-name {
+.weekly-specials {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.dish-info {
+    display: flex;
+  }
+
+
+.dish-name, .person-name{
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -24,15 +35,16 @@
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--secondary-peach);
+    margin-left: auto;
 }
 
 .dish-description {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 .delivery {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 button {
@@ -44,4 +56,69 @@ button {
     border-style: none;
     font-size: 15pt;
     font-weight: bold;
+}
+
+
+button.delivery {
+ align-self: flex-end;
+}
+
+.dish-image{
+    height: 250px;
+    width: 350px;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    object-fit: cover;
+}
+
+.flex {
+    display: flex;
+    overflow: visible;
+    justify-content: center
+}
+
+.stats {
+    padding: 45px 50px;
+    text-align: center;
   }
+
+.menu , .testimonial{
+    margin: 0 30px;
+    text-align: center;
+    width: 350px;
+    background-color: rgb(220, 220, 220);
+    border-radius: 5%;
+  }
+
+p {
+    display: flex;
+    margin-right: 0px;
+  }
+
+  section p{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+  }
+
+.main-2{
+    display: grid;
+    justify-content: center;
+    background-color: var(--primary-green);
+    padding-bottom: 50px;
+}
+
+.person-image{
+    height: 60px;
+    margin-top: 20px;
+
+}
+
+.testimonial-title {
+    color: var(--hightlight-grey);
+    text-align: center;
+   
+}
+
+
+
