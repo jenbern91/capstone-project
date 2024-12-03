@@ -8,22 +8,56 @@
     --border-radius: 16px;
   }
   
-
-.container {
-max-width: 100%;
-  }
+  
 h2 {
     font-family: 'Markazi Text', 'Times New Roman', Times, serif;
     color: var(--highlight-black);
     font-size: 30pt;
+    grid-column: 1 / 2;
     
 }
-
-.weekly-specials {
-    display: flex;
-    max-width: 1440px;
-    margin: 0 auto;
+.our-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1440px;
+  align-content: center;
+  margin: 0 auto;
+  column-gap: 3em;
+  align-items: center;
+ 
 }
+
+.our-story p {
+  font-size: 1.2em;
+}
+
+.story-image {
+  border-radius: 5%;
+  height: 450px;
+}
+
+.grid-weekly {
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1440px;
+  grid-gap: .1em;
+  padding-top: 3em;
+  justify-self: center;
+ 
+}
+
+.weekly-specials,
+.online-menu {
+  align-self: center;
+
+}
+
+.online-menu {
+  grid-column: 4 / 5;
+
+}
+
 
 .dish-info {
     display: flex;
@@ -47,9 +81,15 @@ h2 {
 }
 
 .delivery {
-    font-weight: bold;
-    font-size: 1.1rem;
+display: flex;
+align-items: center;
 }
+
+.delivery-icon {
+  margin-left: auto;
+  margin-right: 1em;
+}
+
 
 button {
     background-color: var(--primary-yellow);
@@ -62,10 +102,6 @@ button {
     font-weight: bold;
 }
 
-
-button.delivery {
- align-self: flex-end;
-}
 
 .dish-image{
     height: 250px;
@@ -82,12 +118,15 @@ button.delivery {
     text-align: center;
   }
 
-.menu , .testimonial{
+.menu {
     margin: 0 30px;
     text-align: center;
     width: 350px;
     background-color: rgb(220, 220, 220);
     border-radius: 5%;
+    padding-bottom: 1em;
+    margin-bottom: 3em;
+  
   }
 
 p {
@@ -95,7 +134,7 @@ p {
     margin-right: 0px;
   }
 
-  section p{
+section p{
     margin-left: 20px;
     margin-right: 20px;
     text-align: left;
@@ -110,25 +149,57 @@ p {
 
 }
 
-.person-image{
-    height: 60px;
-    margin-top: 20px;
+.testimonial {
+  margin: 0 15px;
+  text-align: center;
+  width: 300px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 5%;
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+ }
 
+
+.person-name, .rating{
+  font-size: 1.2rem;
+
+}
+
+.person-image{
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 50%;
 }
 
 .testimonial-title {
     color: var(--hightlight-grey);
-    text-align: center;
-   
+    text-align: center;   
+    margin-bottom: 0;
 }
 
-.grid {
+div.review {
+  text-align: justify;
+}
+
+
+.grid-menu {
   overflow: visible;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1440px;
   grid-gap: .1em;
-  padding-top: 3em;
+  padding-top: em;
+  justify-content: center;
+  justify-self: center;
+}
+
+.grid-testimonial {
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1440px;
+  grid-gap: .1em;
+  padding-top: 2em;
   justify-content: center;
   justify-self: center;
 }

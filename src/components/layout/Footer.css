@@ -1,0 +1,17 @@
+:root {
+    --primary-green: #495E57; 
+    --primary-yellow: #FACE14;
+    --secondary-peach: #EE9972;
+    --secondary-beige: #FBDABB;
+    --hightlight-grey: #EDEFEE;
+    --highlight-black: #333333;
+    --border-radius: 16px;
+  }
+
+.site-map {
+    background-color: var(--primary-green);
+    color:white;
+    height: 300px;
+
+}
+  

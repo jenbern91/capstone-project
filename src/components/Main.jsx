@@ -3,18 +3,23 @@ import '../App.css';
 import image1 from './assets/greek-salad.jpg'
 import image2 from './assets/bruschetta.png'
 import image3 from './assets/lemon-dessert.jpeg'
+import image4 from './assets/emma.png'
+import image5 from './assets/alex.png'
+import image6 from './assets/sofia.png'
+
+import image8 from './assets/restaurant2.jpg'
 import { MdOutlineDeliveryDining } from "react-icons/md";
 
 const Main = () => {
   return (
     <div className='container'>
     
-          <div className='weekly-specials'>
-            <h2>This week's specials!</h2>
-            <button className='Online Menu'>Online Menu</button>
+          <div className='grid-weekly'>
+            <h2 className='weekly-specials'>This week's specials!</h2>
+            <button className='online-menu'>Online Menu</button>
             </div>
 
-            <div className='grid'>
+            <div className='grid-menu'>
                 <section className='menu'>
                 <img src={image1} className='dish-image'></img>
                   <div className='dish-info'>
@@ -22,9 +27,10 @@ const Main = () => {
                     <p className='dish-price'>$12.99</p>
                   </div>
                   <p className='dish-description'>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
-                  <p className='delivery'>Order a delivery</p>
+                  <div className='delivery'>
+                  <p>Order a delivery</p>
                   <div className='delivery-icon'><MdOutlineDeliveryDining size="30px" color='#333333' /> </div>
-                
+                  </div>
                 </section>
 
                 <section className='menu'>
@@ -34,10 +40,10 @@ const Main = () => {
                     <p className='dish-price'>$6.99</p>
                     </div>
                   <p className='dish-description'>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.  </p>
-                
-                  <p className='delivery'>Order a delivery</p>
+                  <div className='delivery'>
+                  <p>Order a delivery</p>
                   <div className='delivery-icon'><MdOutlineDeliveryDining size="30px" color='#333333' /> </div>
-
+                  </div>
                 </section>
 
                 <section className='menu'>
@@ -47,9 +53,11 @@ const Main = () => {
                     <p className='dish-price'>$5.99</p>
                     </div>
                   <p className='dish-description'>This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-                  <p className='delivery'>Order a delivery</p>
+                  <div className='delivery'>
+                  <p>Order a delivery</p>
                   <div className='delivery-icon'><MdOutlineDeliveryDining size="30px" color='#333333' /> </div>
-                </section>
+                  </div>
+                  </section>
 
          
           </div>
@@ -57,36 +65,58 @@ const Main = () => {
 
       <div className='main-2'><h2 className='testimonial-title'>Testimonials</h2>
 
-          <div className='grid'>
+          <div className='grid-testimonial'>
+              
+              
                 <section className='testimonial'>
-                  <img src='logo.svg' className='person-image'></img>
+                  <img src={image4} className='person-image'></img>
                   <div className='review'>
                     <p className='person-name'>Emma T.</p>
-                    <p className='rating'>5 Stars</p>
-                  </div>
-                  <p className='review'>“This place was an absolute gem! The grilled octopus was perfectly tender, and the flavors of the lamb tagine were heavenly. The ambiance truly transported me to the Mediterranean. Highly recommend for a special evening out!” </p>
+                    <p className='rating'>⭐⭐⭐⭐⭐</p>
+                    <p className='review'>“This place was an absolute gem! The grilled octopus was perfectly tender, and the flavors of the lamb tagine were heavenly. The ambiance truly transported me to the Mediterranean. Highly recommend for a special evening out!” </p>
+                    </div>
+                    </section>
 
-                </section>
                 <section className='testimonial'>
-                  <img src='logo.svg' className='person-image'></img>
+                  <img src={image5} className='person-image'></img>
                   <div className='review'>
-                    <p className='person-name'>Alex R</p>
-                    <p className='rating'>5 Stars</p>
-                  </div>
-                  <p className='review'>“I can’t stop thinking about the baklava! The restaurant has a cozy, authentic vibe with excellent service. Try the mezze platter for a little bit of everything—it’s a game changer.” </p>
-
+                    <p className='person-name'>Alex R.</p>
+                    <p className='rating'>⭐⭐⭐⭐⭐</p>
+                    <p className='review'>“I can’t stop thinking about the baklava! The restaurant has a cozy, authentic vibe with excellent service. Try the mezze platter for a little bit of everything—it’s a game changer.” </p>
+                    </div>
                 </section>
+
                 <section className='testimonial'>
-                  <img src='logo.svg' className='person-image'></img>
+                  <img src={image6} className='person-image'></img>
                   <div className='review'>
                     <p className='person-name'>Sofia K.</p>
-                    <p className='rating'>5 Stars</p>
-                  </div>
-                  <p className='review'>“The food was fresh, flavorful, and beautifully presented. I loved the variety of vegetarian options, especially the stuffed grape leaves. A great spot for foodies and Mediterranean cuisine enthusiasts alike!” </p>
-
+                    <p className='rating'>⭐⭐⭐⭐⭐</p>
+                    <p className='review'>“The food was fresh, flavorful, and beautifully presented. I loved the variety of vegetarian options, especially the stuffed grape leaves. A great spot for foodies and Mediterranean cuisine enthusiasts alike!” </p>
+                    </div>
                 </section>
+
+                <section className='testimonial'>
+                  <img src={image5} className='person-image'></img>
+                  <div className='review'>
+                    <p className='person-name'>Alex R.</p>
+                    <p className='rating'>⭐⭐⭐⭐⭐</p>
+                    <p className='review'>“I can’t stop thinking about the baklava! The restaurant has a cozy, authentic vibe with excellent service. Try the mezze platter for a little bit of everything—it’s a game changer.” </p>
+                    </div>
+                </section>
+                
         </div>
         </div>
+
+        <div className='our-story'>
+          <div className='grid-item-1'>
+          <h2>Our Story</h2>
+          <img src={image8} className='story-image'></img>
+          </div>
+          <div className='grid-item-2'>
+          <p>Nestled in the vibrant streets of Chicago, Little Lemon was born out of a love for Mediterranean flavors and the timeless tradition of gathering around a shared table.Founded as a family-owned restaurant, we pride ourselves on infusing every dish with the care, warmth, and authenticity that only generations of culinary passion can bring. Inspired by sun-drenched coasts, bustling markets, and cherished family recipes passed down through generations, our menu celebrates the essence of Mediterranean cuisine. From the freshest seafood and hand-pressed olive oil to fragrant herbs and spices, every ingredient tells a story of heritage and authenticity. At Little Lemon, we believe food is more than sustenance; it’s a way to connect, celebrate, and create lasting memories. Whether you’re savoring a mezze platter with friends, indulging in a hearty lamb dish, or enjoying a sweet slice of baklava, our goal is to transport you to the Mediterranean shores with every bite. As a family-owned establishment, our roots run deep in the traditions of hospitality. When you step into Little Lemon, you’re not just a guest—you’re part of our extended family. Our cozy and inviting space reflects this philosophy, blending modern design with traditional charm. Whether it’s a casual lunch, a romantic dinner, or a celebratory feast, we’re here to make every visit feel like coming home. Come share our passion, taste our story, and experience the magic of the Mediterranean—right here in Chicago. Welcome to Little Lemon.</p>
+        </div>
+       </div>
+
 
 
 
