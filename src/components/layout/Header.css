@@ -17,9 +17,18 @@ body{
 }
 
 .little-lemon-showcase {
+  display: grid;
   height: 400px ;
-  background-color:var(--primary-green) ;
+  justify-content: center;
+  background-color: var(--primary-green);
+  overflow: visible;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  max-width: 100%;
+  grid-gap: 2em;
+  padding-top: 3em;
 }
+
+
 
 img.showcase-image {
   border-radius: 5%;
@@ -69,21 +78,17 @@ button {
   font-weight: bold;
 }
 
-
-.grid {
-  overflow: visible;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  max-width: 1440px;
+.grid-item-1 {
+grid-column: 2 / 3;
 }
 
-.grid-item-1{
-padding-left: 100px;
-
-}
-
-.grid-item-1,
 .grid-item-2 {
-  position: relative;
-  top: 50px;
+  grid-column: 3 / 4;
+ 
+  }
+
+.grid-item-1, .grid-item-2{
+  justify-content: space-around;
+  padding-top: 3em;
 }
+

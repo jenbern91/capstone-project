@@ -8,6 +8,10 @@
     --border-radius: 16px;
   }
   
+
+.container {
+max-width: 100%;
+  }
 h2 {
     font-family: 'Markazi Text', 'Times New Roman', Times, serif;
     color: var(--highlight-black);
@@ -71,11 +75,7 @@ button.delivery {
     object-fit: cover;
 }
 
-.flex {
-    display: flex;
-    overflow: visible;
-    justify-content: center
-}
+
 
 .stats {
     padding: 45px 50px;
@@ -106,6 +106,8 @@ p {
     justify-content: center;
     background-color: var(--primary-green);
     padding-bottom: 50px;
+    height: 500;
+
 }
 
 .person-image{
@@ -120,5 +122,13 @@ p {
    
 }
 
-
-
+.grid {
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1440px;
+  grid-gap: .1em;
+  padding-top: 3em;
+  justify-content: center;
+  justify-self: center;
+}

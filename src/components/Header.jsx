@@ -4,10 +4,8 @@ import showcaseImage from './assets/restaurant.png'
 
 const Header = () => {
   return (
-    <header className='little-lemon-showcase'>
-      <div className='container'>
-        <div className='grid'>
-            <div className='grid-item-1'>
+    <div className='little-lemon-showcase'>
+      <div className='grid-item-1'>
                 <h1>Little Lemon</h1>
                 <h3 className='location'>Chicago</h3>
                 <p className='description'>We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
@@ -19,8 +17,7 @@ const Header = () => {
       
 
         </div>
-      </div>
-    </header>
+    
   )
 }
 

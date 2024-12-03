@@ -1,20 +1,14 @@
 /*Styling Code*/
 
 
-.container {
-    margin: 0 auto;
-    max-width: 1440px;
-    overflow: visible;
-    display: grid;
-  }
   
-  .navbar {
-    background-color:#EDEFEE;
-    height: 90px;
-    padding: 0 30px;
-    font-size: large;
+  .navbar .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
   }
-  
+
   /* No styling on list items */
   li {
     list-style-type: none;
@@ -25,12 +19,7 @@
     height: 70px;
   }
   
-  .navbar .flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
+ 
   
   .navbar ul {
     display: flex;
@@ -44,6 +33,7 @@
     color: #495E57;
     padding: 9px;
     margin: 0 10px;
+   
   }
   
   

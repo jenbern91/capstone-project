@@ -3,7 +3,7 @@ import React from 'react'
 const Nav = () => {
   return (
     <nav className='navbar' >
-      <div className='container flex'>
+      <div className='container'>
     <img src='logo.svg'></img>
     <ul>
       <li><a>Home</a></li>

@@ -7,15 +7,14 @@ import { MdOutlineDeliveryDining } from "react-icons/md";
 
 const Main = () => {
   return (
-    <div className='main'>
-      <div className='stats'>
-
+    <div className='container'>
+    
           <div className='weekly-specials'>
             <h2>This week's specials!</h2>
             <button className='Online Menu'>Online Menu</button>
             </div>
 
-            <div className='flex'>
+            <div className='grid'>
                 <section className='menu'>
                 <img src={image1} className='dish-image'></img>
                   <div className='dish-info'>
@@ -52,13 +51,13 @@ const Main = () => {
                   <div className='delivery-icon'><MdOutlineDeliveryDining size="30px" color='#333333' /> </div>
                 </section>
 
-          </div>
+         
           </div>
      
 
       <div className='main-2'><h2 className='testimonial-title'>Testimonials</h2>
 
-          <div className='flex'>
+          <div className='grid'>
                 <section className='testimonial'>
                   <img src='logo.svg' className='person-image'></img>
                   <div className='review'>
