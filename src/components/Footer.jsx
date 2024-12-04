@@ -1,14 +1,20 @@
 import React from 'react'
 import '../App.css';
+import { FaFacebook } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
-   <>
-   <nav className='site-map'>
+  
+   <div className='footer'>
+  
+  <div className='white-logo'>
+    <img src='logo-white.png'></img>
+  </div>
+   <div className='site-map'>
    <h4>Sitemap</h4>
-
-
-   </nav>
    <ul>
       <li><a>Home</a></li>
       <li><a>Menu</a></li>
@@ -16,6 +22,8 @@ const Footer = () => {
       <li><a>Order Online</a></li>
       <li><a>Login</a></li>
     </ul>
+
+    </div>
 
 
     <div className='contact-us'>
@@ -26,10 +34,13 @@ const Footer = () => {
     </div>
 
     <div className='connect-with-us'>
-      
-
+    <h4>Connect with us</h4>
+      <span><FaFacebook /></span>
+      <span><FaTiktok /></span>
+      <span><FaInstagram /></span>
     </div>
-   </>
+    </div>
+
   )
 }
 

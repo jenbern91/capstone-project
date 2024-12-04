@@ -113,10 +113,6 @@ button {
 
 
 
-.stats {
-    padding: 45px 50px;
-    text-align: center;
-  }
 
 .menu {
     margin: 0 30px;
@@ -144,7 +140,7 @@ section p{
     display: grid;
     justify-content: center;
     background-color: var(--primary-green);
-    padding-bottom: 50px;
+    padding-bottom: 1em;
     height: 500;
 
 }
@@ -169,6 +165,7 @@ section p{
     height: 150px;
     margin-top: 20px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .testimonial-title {
@@ -188,7 +185,7 @@ div.review {
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1440px;
   grid-gap: .1em;
-  padding-top: em;
+  padding-top: 1em;
   justify-content: center;
   justify-self: center;
 }
@@ -199,7 +196,30 @@ div.review {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   max-width: 1440px;
   grid-gap: .1em;
-  padding-top: 2em;
-  justify-content: center;
+  padding-top: 1em;
+  justify-content: start;
   justify-self: center;
 }
+
+
+@media (max-width: 768px) {
+  .grid-menu {
+    grid-template-columns: 1fr;
+  }
+
+  section.menu{
+    flex-direction: column;
+    width: 600px;
+    flex-wrap: wrap;
+    }
+
+  .dish-image{
+      height: 300px;
+      width: 600px;
+      border-top-right-radius: 5%;
+      border-top-left-radius: 5%;
+      object-fit: cover;
+  }
+    
+  }
+

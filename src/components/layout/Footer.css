@@ -8,10 +8,48 @@
     --border-radius: 16px;
   }
 
-.site-map {
-    background-color: var(--primary-green);
-    color:white;
-    height: 300px;
+.footer {
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width: 100%;
+  background-color: var(--primary-green);
+  justify-items: center;
+  color: white;
+  height: 300px;
+  margin-top: 3em;
+  padding-top: 1em;
+  
+}
+
+.white-logo img {
+  height: 10em;
+  padding-top: 1.5em;
+}
+
+
+h4 {
+  font-size: larger;
+  margin-bottom: .5em;
+}
+p {
+margin: 0 ;
+}
+
+ul, p{
+  margin: 0;
+  padding-left: 0;
+}
+
+.white-logo {
+grid-column: 2;
+}
+
+.connect-with-us {
 
 }
-  
+
+span {
+margin: 1em;
+padding-top: 1em;
+  }

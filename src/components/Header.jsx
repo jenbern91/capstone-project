@@ -4,7 +4,9 @@ import showcaseImage from './assets/restaurant.png'
 
 const Header = () => {
   return (
+    <div className='showcase-main'>
     <div className='little-lemon-showcase'>
+     
       <div className='grid-item-1'>
                 <h1>Little Lemon</h1>
                 <h3 className='location'>Chicago</h3>
@@ -14,9 +16,9 @@ const Header = () => {
         <div className='grid-item-2'>
              <img className='showcase-image' src={showcaseImage}></img>
         </div>
-      
-
         </div>
+        </div>
+    
     
   )
 }

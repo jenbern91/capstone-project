@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
 
+/* Tablets and Under */
+
+
 body{
   margin: 0px;
   padding: 0px;
@@ -14,18 +17,6 @@ body{
   --hightlight-grey: #EDEFEE;
   --highlight-black: #333333;
   --border-radius: 16px;
-}
-
-.little-lemon-showcase {
-  display: grid;
-  height: 400px ;
-  justify-content: center;
-  background-color: var(--primary-green);
-  overflow: visible;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  max-width: 100%;
-  /* grid-gap: 2em; */
-  padding-top: 3em;
 }
 
 
@@ -78,17 +69,41 @@ button {
   font-weight: bold;
 }
 
+.little-lemon-showcase {
+  display: grid;
+  height: 400px ;
+  justify-content: center;
+  background-color: var(--primary-green);
+  overflow: visible;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  max-width: 100%;
+  /* grid-gap: 2em; */
+  padding-top: 3em;
+}
+
+
 .grid-item-1 {
 grid-column: 2 / 3;
 }
 
 .grid-item-2 {
   grid-column: 3 / 4;
- 
   }
 
 .grid-item-1, .grid-item-2{
   justify-content: space-around;
   padding-top: 3em;
 }
+
+@media (max-width: 768px) {
+  .little-lemon-showcase {
+    grid-template-columns: 1fr;
+    justify-self: stretch;
+    grid-auto-flow: row;
+  }
+
+
+  
+}
+
 

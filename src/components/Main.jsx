@@ -3,10 +3,10 @@ import '../App.css';
 import image1 from './assets/greek-salad.jpg'
 import image2 from './assets/bruschetta.png'
 import image3 from './assets/lemon-dessert.jpeg'
-import image4 from './assets/emma.png'
-import image5 from './assets/alex.png'
-import image6 from './assets/sofia.png'
-
+import image4 from './assets/Emma.png'
+import image5 from './assets/Alex.png'
+import image6 from './assets/Sofia.png'
+import image7 from './assets/George.png'
 import image8 from './assets/restaurant2.jpg'
 import { MdOutlineDeliveryDining } from "react-icons/md";
 
@@ -96,11 +96,11 @@ const Main = () => {
                 </section>
 
                 <section className='testimonial'>
-                  <img src={image5} className='person-image'></img>
+                  <img src={image7} className='person-image'></img>
                   <div className='review'>
-                    <p className='person-name'>Alex R.</p>
+                    <p className='person-name'>Geroge L.</p>
                     <p className='rating'>⭐⭐⭐⭐⭐</p>
-                    <p className='review'>“I can’t stop thinking about the baklava! The restaurant has a cozy, authentic vibe with excellent service. Try the mezze platter for a little bit of everything—it’s a game changer.” </p>
+                    <p className='review'>“This place is a must-visit for anyone who loves Mediterranean food! The grilled lamb chops were cooked to perfection, and the tzatziki had just the right balance of tang and creaminess. It’s the kind of spot where you can relax and enjoy an incredible meal—I’ll definitely be back!” </p>
                     </div>
                 </section>
                 
@@ -113,7 +113,7 @@ const Main = () => {
           <img src={image8} className='story-image'></img>
           </div>
           <div className='grid-item-2'>
-          <p>Nestled in the vibrant streets of Chicago, Little Lemon was born out of a love for Mediterranean flavors and the timeless tradition of gathering around a shared table.Founded as a family-owned restaurant, we pride ourselves on infusing every dish with the care, warmth, and authenticity that only generations of culinary passion can bring. Inspired by sun-drenched coasts, bustling markets, and cherished family recipes passed down through generations, our menu celebrates the essence of Mediterranean cuisine. From the freshest seafood and hand-pressed olive oil to fragrant herbs and spices, every ingredient tells a story of heritage and authenticity. At Little Lemon, we believe food is more than sustenance; it’s a way to connect, celebrate, and create lasting memories. Whether you’re savoring a mezze platter with friends, indulging in a hearty lamb dish, or enjoying a sweet slice of baklava, our goal is to transport you to the Mediterranean shores with every bite. As a family-owned establishment, our roots run deep in the traditions of hospitality. When you step into Little Lemon, you’re not just a guest—you’re part of our extended family. Our cozy and inviting space reflects this philosophy, blending modern design with traditional charm. Whether it’s a casual lunch, a romantic dinner, or a celebratory feast, we’re here to make every visit feel like coming home. Come share our passion, taste our story, and experience the magic of the Mediterranean—right here in Chicago. Welcome to Little Lemon.</p>
+          <p>Nestled in the vibrant streets of Chicago, Little Lemon was born out of a love for Mediterranean flavors and the timeless tradition of gathering around a shared table.Founded as a family-owned restaurant, we pride ourselves on infusing every dish with the care, warmth, and authenticity that only generations of culinary passion can bring.From the freshest seafood and hand-pressed olive oil to fragrant herbs and spices, every ingredient tells a story of heritage and authenticity. At Little Lemon, we believe food is more than sustenance; it’s a way to connect, celebrate, and create lasting memories. Whether you’re savoring a mezze platter with friends, indulging in a hearty lamb dish, or enjoying a sweet slice of baklava, our goal is to transport you to the Mediterranean shores with every bite. Whether it’s a casual lunch, a romantic dinner, or a celebratory feast, we’re here to make every visit feel like coming home. Come share our passion, taste our story, and experience the magic of the Mediterranean—right here in Chicago. Welcome to Little Lemon.</p>
         </div>
        </div>
 
