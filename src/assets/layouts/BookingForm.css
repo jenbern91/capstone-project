@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+
+:root {
+    --primary-green: #495E57; 
+    --primary-yellow: #FACE14;
+    --secondary-peach: #EE9972;
+    --secondary-beige: #FBDABB;
+    --hightlight-grey: #EDEFEE;
+    --highlight-black: #333333;
+    --border-radius: 16px;
+ }
+
+ .reservation-form{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px;
+    padding-top: 30px;
+    gap: 2em;
+
+
+}
+
+label {
+    font-weight: bold;
+    justify-self: start;
+ }
+
+
+ input, select {
+    border-color: var(--primary-green);
+    border-radius: 15px;
+    height: 2em;
+    text-align: center;
+    width: 300px;
+ }
+
+ textarea {
+    width: 300px;
+ }
+
+button, input, optgroup, select, textarea{
+    font-family: 'Karla', 'Times', 'Serif';
+    font-size: 100%;
+    margin: 0;
+    color: var(--primary-green);
+ }
+
+
+.res-title {
+    grid-column: span 2;
+}
+
+div .special {
+grid-column: span 2;
+}
+
+.reserve-button {
+    grid-column: span 2;
+    justify-self: center;
+    background-color: var(--primary-yellow);
+    font-family: 'Karla', 'Times New Roman', Times, serif;        
+    height: 50px;
+    width: 300px;
+    border-radius: 16px;
+    border-style: none;
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+.res-title {
+    justify-self: left;
+}

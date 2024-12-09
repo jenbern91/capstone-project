@@ -1,8 +1,23 @@
 import React from 'react'
+import { useState } from "react";
+import Nav from './Nav'
+import BookingForm from './BookingForm'
+import Footer from './Footer'
 
-const BookingPage = () => {
+import '../App.css'
+import '../assets/layouts/Nav.css';
+import '../assets/layouts/Footer.css';
+import '../assets/layouts/BookingForm.css';
+
+
+const BookingPage = (props) => {
   return (
-    <div></div>
+    <>
+    <Nav />
+    <BookingForm />
+    {/* <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} submitForm={props.submitForm} /> */}
+    <Footer /> 
+    </>
   )
 }
 
