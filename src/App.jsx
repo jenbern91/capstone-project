@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Route, Routes } from "react-router-dom"
 
 import Homepage from './components/Homepage'
 import Bookingpage from './components/Bookingpage'
@@ -8,7 +9,10 @@ function App() {
 
   return (
   <>
-<Homepage /> 
+<Routes> 
+    <Route path="/" element={<Homepage />}></Route>
+    <Route path="/booking" element={<Bookingpage />}></Route>
+</Routes>
 
 
   </>
