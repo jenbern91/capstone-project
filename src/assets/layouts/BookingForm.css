@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
 
+
+/* General reset for all inputs */
+input, select, textarea {
+    border: 2px solid var(--primary-green); /* Explicitly define border thickness */
+    border-radius: 15px; /* Consistent border radius */
+    outline: none; /* Remove default focus outline */
+    box-shadow: none; /* Remove default shadows */
+    background-color: white; /* Ensure uniform background */
+}
+
+
 :root {
     --primary-green: #495E57; 
     --primary-yellow: #FACE14;
@@ -72,3 +83,4 @@ grid-column: span 2;
 .res-title {
     justify-self: left;
 }
+
