@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Route, Routes } from "react-router-dom"
 
-import Homepage from './components/Homepage'
-import Bookingpage from './components/Bookingpage'
+import HomePage from './components/HomePage'
+import BookingPage from './components/BookingPage'
 import './App.css'
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
   return (
   <>
 <Routes> 
-    <Route path="/" element={<Homepage />}></Route>
-    <Route path="/booking" element={<Bookingpage />}></Route>
+    <Route path="/" element={<HomePage />}></Route>
+    <Route path="/booking" element={<BookingPage />}></Route>
 </Routes>
 
 

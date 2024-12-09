@@ -42,11 +42,11 @@ section {
     background-color: var(--primary-green);
     padding-top: 1em;
     padding-bottom: 1em;
-    height: 500;
+    height: 550px;
+
  }
 
 
-  
 
  .person-name, .rating{
     font-size: 1.2rem;
@@ -86,13 +86,14 @@ section {
     .grid-testimonial {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        margin-left: 100px;
+        margin-right: 100px;
     
     }
 
-
     [class ^= "testimonial-"] {
         grid-column: span 1;
-        max-width: 250px;
+        max-width: auto;
     }
 
    

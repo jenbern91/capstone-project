@@ -9,8 +9,6 @@
     --hightlight-grey: #EDEFEE;
     --highlight-black: #333333;
     --border-radius: 16px;
-    --fontMarkazi: 'Markazi Text', 'Times New Roman', Times, serif;
-    --fontKarla: 'Karla Regular', Arial, Helvetica, sans-serif;
   }
   
   /*Styling Code*/
@@ -23,13 +21,12 @@
   }
 
   /* No styling on list items */
-  li {
+  .navbar li {
     list-style-type: none;
-    font-family: var(--fontKarla);
-    
+    font-family: 'Karla', 'Times', 'Times New Roman', 'Serif';
   }
-  
-  .navbar img {
+
+.navbar img {
     margin: 10px 0;
     height: 70px;
   }
@@ -39,7 +36,6 @@
   .navbar ul {
     display: flex;
     font-weight: bold;
-    font-family: var(--fontKarla);
     font-size: large
   }
   
@@ -49,6 +45,7 @@
     color: #495E57;
     padding: 9px;
     margin: 0 10px;
+    text-decoration: none;  /* remove underline */
    
   }
   
@@ -62,8 +59,8 @@
     background: transparent;
     transition: width .5s ease, background-color .5s ease;
   }
+  
   .navbar ul li:hover:after {
     width: 80%;
     background: #495E57;
   }
-  

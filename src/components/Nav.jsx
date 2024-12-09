@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
@@ -6,12 +7,23 @@ const Nav = () => {
         <div className='nav-container'>
           <img src='Logo.svg' />
       <ul>
-        <li>Home</li>
-        <li>Menu</li>
-        <li>Reservations</li>
-        <li>Order Online</li>
-        <li>Login</li>
-        <i className='fa-soli fa-user'></i>
+        <li>
+          <Link to='/home'>Home</Link>
+        </li>
+        <li>
+          <Link to='#'>Menu</Link>
+        </li>
+        <li>
+          <Link to='/booking'>Reservations</Link>
+        </li>
+        <li>
+          <Link to='#'>Order Online</Link>
+        </li>
+        <li>
+          <Link to='#'>Login</Link>
+        </li>
+       
+    
       </ul>
       </div>
       </nav>

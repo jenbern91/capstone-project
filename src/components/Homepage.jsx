@@ -15,7 +15,7 @@ import '../assets/layouts/CustomersSay.css';
 import '../assets/layouts/Chicago.css';
 import '../assets/layouts/Footer.css';
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <>
     <Nav />
@@ -29,4 +29,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
+export default HomePage
