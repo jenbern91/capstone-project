@@ -14,8 +14,7 @@ const BookingPage = (props) => {
   return (
     <>
     <Nav />
-    <BookingForm />
-    {/* <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} submitForm={props.submitForm} /> */}
+    <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} submitForm={props.submitForm} />
     <Footer /> 
     </>
   )

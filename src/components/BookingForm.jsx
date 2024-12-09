@@ -9,15 +9,9 @@ const BookingForm = (props) => {
   const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    props.submitForm({
-      date,
-      time,
-      guests,
-      occasion,
-      requests,
-    });
-  };
+  e.preventDefault();
+  props.submitForm({ date, time, guests, occasion, requests }); // Pass form data as an object
+};
 
   const handleDateChange = (e) => {
     const newDate = e.target.value;
@@ -41,7 +35,7 @@ const BookingForm = (props) => {
           required
         />
 
-        <label htmlFor="res-time">Choose time</label>
+        <label for="res-time">Choose time</label>
         <select
           id="res-time"
           value={time}
@@ -49,14 +43,10 @@ const BookingForm = (props) => {
           required
         >
           <option value="">Select a Time</option>
-          {availableTimes.map((time) => (
-            <option key={time} value={time}>
-              {time}
-            </option>
-          ))}
+          {availableTimes.map((time) => (<option key={time} value={time}>{time}</option>))}
         </select>
 
-        <label htmlFor="guests">Number of guests</label>
+        <label for="guests">Number of guests</label>
         <input
           type="number"
           id="guests"
@@ -68,7 +58,7 @@ const BookingForm = (props) => {
           required
         />
 
-        <label htmlFor="occasion">Occasion</label>
+        <label for="occasion">Occasion</label>
         <select
           id="occasion"
           value={occasion}
