@@ -1,0 +1,123 @@
+:root {
+    --primary-green: #495E57; 
+    --primary-yellow: #FACE14;
+    --secondary-peach: #EE9972;
+    --secondary-beige: #FBDABB;
+    --hightlight-grey: #EDEFEE;
+    --highlight-black: #333333;
+    --border-radius: 16px;
+    --fontMarkazi: 'Markazi Text', 'Times New Roman', Times, serif;
+    --fontKarla: 'Karla Regular', Arial, Helvetica, sans-serif;
+  }
+
+  [class ^= "box-"] {
+    display: grid;
+    /* place-items: center; */
+    /* border: solid 5px orangered; */
+    padding: 10px;
+  }
+  
+  
+
+.hero {
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.hero .box-1 {
+    grid-column: span 1;
+}
+
+.hero .box-2 {
+    grid-column: span 1;
+}
+
+   
+
+
+img.showcase-image {
+    border-radius: 16px;
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+  } 
+
+
+h1 {
+    font-family: 'Markazi Text', 'Times New Roman', Times, serif;
+    color: var(--primary-yellow);
+    font-size: 3em;
+    font-weight: 200;
+}
+
+h3.location{
+    font-size: 2em;
+    color: white;
+    padding-bottom: 30px;
+    font-family: var(--fontMarkazi);
+    font-weight: 200;
+
+}
+
+p.description {
+    font-size: 1.2em;
+    color: white;
+    padding-bottom: 30px;
+    
+}
+
+
+
+
+.reserve-button {
+    background-color: var(--primary-yellow);
+    font-family: 'Karla', 'Times New Roman', Times, serif;        height: 50px;
+    width: 200px;
+    border-radius: 16px;
+    border-style: none;
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--primary-green);
+ }
+  
+  
+/* to target all 'box-' classes */
+
+
+
+
+
+/* Tablet */
+@media (min-width: 768px){
+
+           
+}
+
+/* Desktop */
+
+@media (min-width: 1080px){
+    .hero {
+        background-color: #495E57;
+        margin: 20px auto;
+        height: 400px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(6, 1fr);    
+        padding-top: 2em;
+        width: 100%;
+    }
+    
+    .hero .box-1 {
+        grid-column: 2 / 4;
+      
+    }
+    
+    .hero .box-2 {
+      
+        grid-column: 4 / 6;
+    }
+
+}
+
+

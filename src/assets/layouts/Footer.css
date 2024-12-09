@@ -1,0 +1,76 @@
+:root {
+    --primary-green: #495E57; 
+    --primary-yellow: #FACE14;
+    --secondary-peach: #EE9972;
+    --secondary-beige: #FBDABB;
+    --hightlight-grey: #EDEFEE;
+    --highlight-black: #333333;
+    --border-radius: 16px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--primary-green);
+    height: 300px;
+    color: white;
+    gap: 20px;
+    padding-top: 30px;
+    justify-items: center;
+  }
+  
+  
+  .white-logo img {
+      height: 90px;
+  }
+  
+  .white-logo {
+      grid-column: span 1;
+  }
+  
+  .site-map {
+    grid-column: span 1;
+  }
+  
+  .contac-us {
+    grid-column: span 1;
+  }
+  
+  .connect-with-us {
+    grid-column: span 1;
+  }
+  
+  
+@media (min-width: 1080px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        background-color: var(--primary-green);
+        height: 300px;
+        color: white;
+        gap: 20px;
+        padding-top: 30px;
+      }
+      
+      
+      .white-logo img {
+          height: 90px;
+      }
+      
+      .white-logo {
+          grid-column: 2 / 3;
+      }
+      
+      .site-map {
+          grid-column: 3 / 4;
+      }
+      
+      .contac-us {
+          grid-column: 4 /5;
+      }
+      .connect-with-us {
+          grid-column: 5 /6;
+      }
+      
+      
+}

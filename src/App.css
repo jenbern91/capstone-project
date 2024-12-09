@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+
+
+:root {
+    --primary-green: #495E57; 
+    --primary-yellow: #FACE14;
+    --secondary-peach: #EE9972;
+    --secondary-beige: #FBDABB;
+    --hightlight-grey: #EDEFEE;
+    --highlight-black: #333333;
+    --border-radius: 16px;
+    --fontMarkazi: 'Markazi Text', 'Times New Roman', Times, serif;
+    --fontKarla: 'Karla Regular', Arial, Helvetica, sans-serif;
+  }
+
+  *{
+    margin:0;
+    padding: 0;
+  }

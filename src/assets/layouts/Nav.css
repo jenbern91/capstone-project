@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+
+
+:root {
+    --primary-green: #495E57; 
+    --primary-yellow: #FACE14;
+    --secondary-peach: #EE9972;
+    --secondary-beige: #FBDABB;
+    --hightlight-grey: #EDEFEE;
+    --highlight-black: #333333;
+    --border-radius: 16px;
+    --fontMarkazi: 'Markazi Text', 'Times New Roman', Times, serif;
+    --fontKarla: 'Karla Regular', Arial, Helvetica, sans-serif;
+  }
+  
+  /*Styling Code*/
+
+.navbar .nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+
+  /* No styling on list items */
+  li {
+    list-style-type: none;
+    font-family: var(--fontKarla);
+    
+  }
+  
+  .navbar img {
+    margin: 10px 0;
+    height: 70px;
+  }
+  
+ 
+  
+  .navbar ul {
+    display: flex;
+    font-weight: bold;
+    font-family: var(--fontKarla);
+    font-size: large
+  }
+  
+  /* Changes the color of both links to white, adds padding between them and margin as well */
+  
+  .navbar a {
+    color: #495E57;
+    padding: 9px;
+    margin: 0 10px;
+   
+  }
+  
+  
+  .navbar ul li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1.5px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  .navbar ul li:hover:after {
+    width: 80%;
+    background: #495E57;
+  }
+  
