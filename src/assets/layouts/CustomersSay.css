@@ -86,12 +86,13 @@ section {
     .grid-testimonial {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        margin-left: 200px;
-        margin-right: 200px;
+    
     }
+
 
     [class ^= "testimonial-"] {
         grid-column: span 1;
+        max-width: 250px;
     }
 
    

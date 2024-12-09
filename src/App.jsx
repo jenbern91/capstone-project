@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 
 import Homepage from './components/Homepage'
 import Bookingpage from './components/Bookingpage'
+import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
