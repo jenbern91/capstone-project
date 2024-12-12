@@ -164,6 +164,7 @@ h2 {
     
      .specials .special-title {
         grid-column: 2 / 5;
+        align-self: end;
       }
     
       .specials .special-1 {

@@ -18,6 +18,10 @@
     padding-top: 30px;
     justify-items: center;
   }
+
+  li {
+    list-style: none;
+  }
   
   
   .white-logo img {
