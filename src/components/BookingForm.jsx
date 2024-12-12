@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 
-const BookingForm = (props) => {
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
   const [occasion, setOccasion] = useState("");
   const [requests, setRequests] = useState("");
-  const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
 
   const handleSubmit = (e) => {
-  e.preventDefault();
-  props.submitForm({ date, time, guests, occasion, requests }); // Pass form data as an object
-};
+    e.preventDefault();
+    submitForm({ date, time, guests, occasion, requests }); // Pass form data as an object
+  };
 
   const handleDateChange = (e) => {
     const newDate = e.target.value;
     setDate(newDate);
-    if (props.dispatch) {
-      props.dispatch(newDate);
+    if (dispatch) {
+      dispatch({ type: 'UPDATE_TIMES', date: newDate });
     }
   };
 
@@ -33,20 +32,24 @@ const BookingForm = (props) => {
           value={date}
           onChange={handleDateChange}
           required
+          aria-label="Choose date"
         />
 
-        <label for="res-time">Choose time</label>
+        <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
           required
+          aria-label="Choose time"
         >
           <option value="">Select a Time</option>
-          {availableTimes.map((time) => (<option key={time} value={time}>{time}</option>))}
+          {availableTimes.map((time) => (
+            <option key={time} value={time}>{time}</option>
+          ))}
         </select>
 
-        <label for="guests">Number of guests</label>
+        <label htmlFor="guests">Number of guests</label>
         <input
           type="number"
           id="guests"
@@ -56,14 +59,16 @@ const BookingForm = (props) => {
           min="1"
           max="10"
           required
+          aria-label="Number of guests"
         />
 
-        <label for="occasion">Occasion</label>
+        <label htmlFor="occasion">Occasion</label>
         <select
           id="occasion"
           value={occasion}
           onChange={(e) => setOccasion(e.target.value)}
           required
+          aria-label="Occasion"
         >
           <option value="">Select an Occasion</option>
           <option value="Birthday">Birthday</option>
@@ -79,9 +84,10 @@ const BookingForm = (props) => {
           value={requests}
           onChange={(e) => setRequests(e.target.value)}
           placeholder="Any special requests?"
+          aria-label="Special requests"
         />
 
-        <button type="submit" className="reserve-button">
+        <button type="submit" className="reserve-button" aria-label="Make your reservation">
           Make your reservation
         </button>
       </form>

@@ -12,11 +12,13 @@ import '../assets/layouts/BookingForm.css';
 
 const BookingPage = (props) => {
   return (
-    <>
-    <Nav />
-    <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} submitForm={props.submitForm} />
-    <Footer /> 
-    </>
+    <div>
+      <BookingForm 
+        availableTimes={props.availableTimes} 
+        dispatch={props.dispatch} 
+        submitForm={props.submitForm} 
+      />
+    </div>
   )
 }
 
