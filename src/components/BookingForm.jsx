@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const BookingForm = ({ availableTimes, submitForm }) => {
   const [date, setDate] = useState("");
@@ -6,10 +7,13 @@ const BookingForm = ({ availableTimes, submitForm }) => {
   const [guests, setGuests] = useState("");
   const [occasion, setOccasion] = useState("");
   const [requests, setRequests] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    submitForm({ date, time, guests, occasion, requests }); // Pass form data as an object
+    const dateObject = new Date(date); // Convert string to Date object
+    submitForm({ date: dateObject, time, guests, occasion, requests }); // Pass form data as an object
+    navigate('/confirmed-booking'); // Navigate to ConfirmedBooking page
   };
 
   const handleDateChange = (e) => {
@@ -34,7 +38,7 @@ const BookingForm = ({ availableTimes, submitForm }) => {
           onChange={handleDateChange}
         />
 
-  <label htmlFor="res-time">Choose time</label>
+        <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time"
           value={time}
@@ -48,8 +52,6 @@ const BookingForm = ({ availableTimes, submitForm }) => {
           ))}
         </select>
 
-
-        {/* Other form fields */}
         <label htmlFor="guests">No. of Guests</label>
         <input
           type="number"
@@ -59,7 +61,6 @@ const BookingForm = ({ availableTimes, submitForm }) => {
           placeholder="1"
           min="1"
           max="10"
-          required
           aria-label="Number of guests"
         />
 

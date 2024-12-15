@@ -1,7 +1,8 @@
 import React, { useReducer, useEffect } from 'react';
 import { Route, Routes } from "react-router-dom";
-import HomePage from './components/HomePage'; // Ensure HomePage is correctly imported
+import HomePage from './components/HomePage';
 import BookingPage from './components/BookingPage';
+import ConfirmedBooking from './components/ConfirmedBooking'; // Import ConfirmedBooking
 import { initializeTimes, updateTimes } from './components/reservationService';
 
 import './App.css';
@@ -43,6 +44,7 @@ const App = () => {
           path="/booking" 
           element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={handleDateChange} />} 
         />
+        <Route path="/confirmed-booking" element={<ConfirmedBooking />} /> {/* Add route for ConfirmedBooking */}
       </Routes>
     </>
   );
