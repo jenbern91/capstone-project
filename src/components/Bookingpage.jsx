@@ -9,19 +9,18 @@ import '../assets/layouts/Nav.css';
 import '../assets/layouts/Footer.css';
 import '../assets/layouts/BookingForm.css';
 
-
-const BookingPage = (props) => {
+const BookingPage = ({ availableTimes, dispatch, submitForm }) => {
   return (
     <div>
       <Nav />
       <BookingForm 
-        availableTimes={props.availableTimes} 
-        dispatch={props.dispatch} 
-        submitForm={props.submitForm} 
-      />
+        availableTimes={availableTimes} 
+        dispatch={dispatch} 
+        submitForm={submitForm} 
+         />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default BookingPage

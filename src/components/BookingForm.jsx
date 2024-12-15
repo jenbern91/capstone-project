@@ -19,11 +19,8 @@ const BookingForm = ({ availableTimes, submitForm }) => {
   const handleDateChange = (e) => {
     const newDate = e.target.value;
     setDate(newDate);
-    if (submitForm) {
-      const dateObject = new Date(newDate); // Convert string to Date object
-      submitForm(dateObject);
-    }
   };
+
 
   return (
     <>
