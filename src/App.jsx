@@ -1,42 +1,38 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { Route, Routes } from "react-router-dom";
-import HomePage from './components/HomePage';
+import HomePage from './components/HomePage'; // Ensure HomePage is correctly imported
 import BookingPage from './components/BookingPage';
+import { initializeTimes, updateTimes } from './components/reservationService';
+
 import './App.css';
 
-// Define or import availableTimesReducer and initialState
-const initialState = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+// Define initial state
+const initialState = [];
 
+// Reducer function to update available times based on the selected date
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_TIMES':
-      // Logic to update available times based on the selected date
-      return fetchAvailableTimesForDate(action.date);
+      return action.times;
     default:
       return state;
   }
 };
 
-const fetchAvailableTimesForDate = (date) => {
-  // Mock function to simulate fetching available times for a given date
-  // In a real application, you might fetch this data from an API
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-};
+const App = () => {
+  const [availableTimes, dispatch] = useReducer(availableTimesReducer, initialState);
 
-const initializeTimes = () => {
-  // Logic to initialize available times
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-};
+  useEffect(() => {
+    async function fetchInitialTimes() {
+      const times = await initializeTimes();
+      dispatch({ type: 'UPDATE_TIMES', times });
+    }
+    fetchInitialTimes();
+  }, []);
 
-function App() {
-  const [availableTimes, dispatch] = useReducer(availableTimesReducer, initialState, initializeTimes);
-
-  const updateTimes = (date) => {
-    dispatch({ type: 'UPDATE_TIMES', date });
-  };
-
-  const submitForm = (formData) => {
-    // Your form submission logic here
+  const handleDateChange = async (selectedDate) => {
+    const times = await updateTimes(selectedDate);
+    dispatch({ type: 'UPDATE_TIMES', times });
   };
 
   return (
@@ -45,11 +41,11 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route 
           path="/booking" 
-          element={<BookingPage availableTimes={availableTimes} dispatch={updateTimes} submitForm={submitForm} />} 
+          element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={handleDateChange} />} 
         />
       </Routes>
     </>
   );
-}
+};
 
 export default App;

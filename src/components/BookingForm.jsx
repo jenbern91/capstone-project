@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
+const BookingForm = ({ availableTimes, submitForm }) => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
@@ -15,8 +15,9 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const handleDateChange = (e) => {
     const newDate = e.target.value;
     setDate(newDate);
-    if (dispatch) {
-      dispatch({ type: 'UPDATE_TIMES', date: newDate });
+    if (submitForm) {
+      const dateObject = new Date(newDate); // Convert string to Date object
+      submitForm(dateObject);
     }
   };
 
@@ -31,11 +32,9 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
           id="res-date"
           value={date}
           onChange={handleDateChange}
-          required
-          aria-label="Choose date"
         />
 
-        <label htmlFor="res-time">Choose time</label>
+  <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time"
           value={time}
@@ -49,7 +48,9 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
           ))}
         </select>
 
-        <label htmlFor="guests">Number of guests</label>
+
+        {/* Other form fields */}
+        <label htmlFor="guests">No. of Guests</label>
         <input
           type="number"
           id="guests"
