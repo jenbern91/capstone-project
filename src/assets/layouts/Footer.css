@@ -8,6 +8,11 @@
     --border-radius: 16px;
 }
 
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -19,8 +24,10 @@
     justify-items: center;
   }
 
-  li {
+li{
     list-style: none;
+    text-decoration: none;
+    
   }
   
   

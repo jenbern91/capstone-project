@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebook } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -11,13 +12,24 @@ const Footer = () => {
     </div>
      <div className='site-map'>
      <h4>Sitemap</h4>
-     <ul>
-        <li><a>Home</a></li>
-        <li><a>Menu</a></li>
-        <li><a>Reservations</a></li>
-        <li><a>Order Online</a></li>
-        <li><a>Login</a></li>
-      </ul>
+     
+     <ul className='nav-links'>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to='#'>Menu</Link>
+          </li>
+          <li>
+            <Link to='/booking'>Reservations</Link>
+          </li>
+          <li>
+            <Link to='#'>Order Online</Link>
+          </li>
+          <li>
+            <Link to='#'>Login</Link>
+          </li>
+        </ul>
   
       </div>
   
