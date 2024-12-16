@@ -21,7 +21,7 @@
   }
 
   /* No styling on list items */
-  .navbar li {
+.navbar li {
     list-style-type: none;
     font-family: 'Karla', 'Times', 'Times New Roman', 'Serif';
   }
@@ -30,9 +30,7 @@
     margin: 10px 0;
     height: 70px;
   }
-  
- 
-  
+
   .navbar ul {
     display: flex;
     font-weight: bold;
@@ -63,4 +61,55 @@
   .navbar ul li:hover:after {
     width: 80%;
     background: #495E57;
+  }
+  
+
+ @media (max-width: 768px) {
+
+ul.nav-links{
+  display: none;
+}
+
+/* .navbar {
+   display: block;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+  }  */
+
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-self: end;
+    padding: 1rem;
+
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  
+
+  .nav-links.active {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
   }
